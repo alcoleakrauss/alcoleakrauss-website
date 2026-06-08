@@ -6,6 +6,9 @@
 <title>Arte — Alcolea + Krauss · Mahón, Menorca</title>
 <meta name="description" content="Obra gráfica original de los grandes maestros del arte moderno. Litografías, serigrafías y grabados firmados y numerados.">
 <link rel="stylesheet" href="/style.css">
+<style>
+.art-card.hidden { display: none; }
+</style>
 </head>
 <body>
 
@@ -35,21 +38,27 @@
 </section>
 
 <div class="filter-bar">
-  <button class="filter-btn active">Todos</button>
-  <button class="filter-btn">Calder</button>
-  <button class="filter-btn">Hartung</button>
-  <button class="filter-btn">Saura</button>
-  <button class="filter-btn">Chillida</button>
-  <button class="filter-btn">Barceló</button>
-  <button class="filter-btn">Tàpies</button>
-  <button class="filter-btn">Otros</button>
+  <button class="filter-btn active" data-filter="all">Todos <span style="font-size:9px;opacity:0.6">23</span></button>
+  <button class="filter-btn" data-filter="calder">Calder <span style="font-size:9px;opacity:0.6">3</span></button>
+  <button class="filter-btn" data-filter="hartung">Hartung <span style="font-size:9px;opacity:0.6">5</span></button>
+  <button class="filter-btn" data-filter="saura">Saura <span style="font-size:9px;opacity:0.6">4</span></button>
+  <button class="filter-btn" data-filter="chillida">Chillida <span style="font-size:9px;opacity:0.6">2</span></button>
+  <button class="filter-btn" data-filter="tapies">Tàpies</button>
+  <button class="filter-btn" data-filter="barcelo">Barceló</button>
+  <button class="filter-btn" data-filter="botero">Botero</button>
+  <button class="filter-btn" data-filter="foujita">Foujita</button>
+  <button class="filter-btn" data-filter="genoves">Genovés</button>
+  <button class="filter-btn" data-filter="lam">Lam</button>
+  <button class="filter-btn" data-filter="clave">Clavé</button>
+  <button class="filter-btn" data-filter="marini">Marini</button>
+  <button class="filter-btn" data-filter="equipo">Eq. Crónica</button>
 </div>
 
-<div class="art-grid">
+<div class="art-grid" id="grid">
 
   <!-- CALDER - Le Turban -->
-  <div class="art-card">
-    <div class="art-img"><img src="/c1_1.jpeg" alt="Calder - Le Turban"></div>
+  <div class="art-card" data-artist="calder">
+    <div class="art-img"><img src="/Calder%20%20Le%20Turban.webp" alt="Calder - Le Turban"></div>
     <div class="art-info">
       <span class="art-artist">Alexander Calder <span class="art-dates">(1898–1976)</span></span>
       <span class="art-title">Le Turban, 1969</span>
@@ -60,9 +69,35 @@
     </div>
   </div>
 
+  <!-- CALDER - Spirale -->
+  <div class="art-card" data-artist="calder">
+    <div class="art-img"><img src="/Calder%20%20Spirale.jpg" alt="Calder - Spirale"></div>
+    <div class="art-info">
+      <span class="art-artist">Alexander Calder <span class="art-dates">(1898–1976)</span></span>
+      <span class="art-title">Spirale, 1970</span>
+      <span class="art-technique">Litografía sobre papel</span>
+      <span class="art-dims">109 × 75 cm</span>
+      <span class="art-edition">Firmada · 45/45 · Fernand Mourlot, París · Ref. 98000</span>
+      <div class="art-footer"><span class="art-price">Consultar</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- CALDER - Sala Gaspar -->
+  <div class="art-card" data-artist="calder">
+    <div class="art-img"><img src="/Calder%20Sala%20Gaspar-1.webp" alt="Calder - Sala Gaspar"></div>
+    <div class="art-info">
+      <span class="art-artist">Alexander Calder <span class="art-dates">(1898–1976)</span></span>
+      <span class="art-title">"Sala Gaspar", Barcelona 1970</span>
+      <span class="art-technique">Litografía en colores sobre papel</span>
+      <span class="art-dims">63 × 50 cm</span>
+      <span class="art-edition">Firmada · 22/75 · Ref. 96000</span>
+      <div class="art-footer"><span class="art-price">9.000 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
   <!-- HARTUNG h1 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/h1_1.jpeg" alt="Hartung - L 1970-26"></div>
+  <div class="art-card" data-artist="hartung">
+    <div class="art-img"><img src="/h1.1.webp" alt="Hartung - L 1970-26"></div>
     <div class="art-info">
       <span class="art-artist">Hans Hartung <span class="art-dates">(1904–1989)</span></span>
       <span class="art-title">L 1970-26, 1970</span>
@@ -74,8 +109,8 @@
   </div>
 
   <!-- HARTUNG h2 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/h2_1.jpeg" alt="Hartung - Farandole suite A pl III"></div>
+  <div class="art-card" data-artist="hartung">
+    <div class="art-img"><img src="/h2.1.webp" alt="Hartung - Farandole pl III"></div>
     <div class="art-info">
       <span class="art-artist">Hans Hartung <span class="art-dates">(1904–1989)</span></span>
       <span class="art-title">L 1970-3 / Farandole, suite A, pl. III, 1970</span>
@@ -87,8 +122,8 @@
   </div>
 
   <!-- HARTUNG h3 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/h3_1.jpeg" alt="Hartung - Farandole suite A pl II"></div>
+  <div class="art-card" data-artist="hartung">
+    <div class="art-img"><img src="/h3.1.webp" alt="Hartung - Farandole pl II"></div>
     <div class="art-info">
       <span class="art-artist">Hans Hartung <span class="art-dates">(1904–1989)</span></span>
       <span class="art-title">L 1970-2 / Farandole, suite A, pl. II, 1970</span>
@@ -100,8 +135,8 @@
   </div>
 
   <!-- HARTUNG h4 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/h4_1.jpeg" alt="Hartung - L 1976-19"></div>
+  <div class="art-card" data-artist="hartung">
+    <div class="art-img"><img src="/h4.1.webp" alt="Hartung - L 1976-19"></div>
     <div class="art-info">
       <span class="art-artist">Hans Hartung <span class="art-dates">(1904–1989)</span></span>
       <span class="art-title">L 1976-19, 1976</span>
@@ -113,8 +148,8 @@
   </div>
 
   <!-- HARTUNG h5 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/h5_1.jpeg" alt="Hartung - L 1976-18"></div>
+  <div class="art-card" data-artist="hartung">
+    <div class="art-img"><img src="/h5.1.webp" alt="Hartung - L 1976-18"></div>
     <div class="art-info">
       <span class="art-artist">Hans Hartung <span class="art-dates">(1904–1989)</span></span>
       <span class="art-title">L 1976-18, 1976</span>
@@ -126,8 +161,8 @@
   </div>
 
   <!-- SAURA s1 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/s1_1.jpeg" alt="Saura - Abierta 7"></div>
+  <div class="art-card" data-artist="saura">
+    <div class="art-img"><img src="/s1.1.webp" alt="Saura - Abierta 7"></div>
     <div class="art-info">
       <span class="art-artist">Antonio Saura <span class="art-dates">(1930–1998)</span></span>
       <span class="art-title">"Abierta 7", 1989</span>
@@ -139,8 +174,8 @@
   </div>
 
   <!-- SAURA s2 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/s2_1.jpeg" alt="Saura - Abierta 8"></div>
+  <div class="art-card" data-artist="saura">
+    <div class="art-img"><img src="/s2.1.webp" alt="Saura - Abierta 8"></div>
     <div class="art-info">
       <span class="art-artist">Antonio Saura <span class="art-dates">(1930–1998)</span></span>
       <span class="art-title">"Abierta 8", 1989</span>
@@ -152,8 +187,8 @@
   </div>
 
   <!-- SAURA s3 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/s3_1.jpeg" alt="Saura - Abierta 1"></div>
+  <div class="art-card" data-artist="saura">
+    <div class="art-img"><img src="/s3.1.webp" alt="Saura - Abierta 1"></div>
     <div class="art-info">
       <span class="art-artist">Antonio Saura <span class="art-dates">(1930–1998)</span></span>
       <span class="art-title">"Abierta 1", 1989</span>
@@ -165,8 +200,8 @@
   </div>
 
   <!-- SAURA s4 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/s4_1.jpeg" alt="Saura - Asedio"></div>
+  <div class="art-card" data-artist="saura">
+    <div class="art-img"><img src="/s4.1.webp" alt="Saura - Asedio"></div>
     <div class="art-info">
       <span class="art-artist">Antonio Saura <span class="art-dates">(1930–1998)</span></span>
       <span class="art-title">"Asedio", 1980</span>
@@ -177,9 +212,35 @@
     </div>
   </div>
 
-  <!-- TÀPIES t1 -->
-  <div class="art-card">
-    <div class="art-img"><img src="/t1_1.jpeg" alt="Tàpies - Cordill"></div>
+  <!-- CHILLIDA - Litografía -->
+  <div class="art-card" data-artist="chillida">
+    <div class="art-img"><img src="/c1.1.webp" alt="Chillida - Litografía"></div>
+    <div class="art-info">
+      <span class="art-artist">Eduardo Chillida <span class="art-dates">(1924–2002)</span></span>
+      <span class="art-title">Sin título</span>
+      <span class="art-technique">Litografía sobre papel</span>
+      <span class="art-dims">32 × 40 cm</span>
+      <span class="art-edition">Firmada y numerada a lápiz 450/1000 · Ref. 365509</span>
+      <div class="art-footer"><span class="art-price">2.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- CHILLIDA - Placards Jabs -->
+  <div class="art-card" data-artist="chillida">
+    <div class="art-img"><img src="/Chillida%20escritura%20poeta.webp" alt="Chillida - Placards Jabs"></div>
+    <div class="art-info">
+      <span class="art-artist">Eduardo Chillida <span class="art-dates">(1924–2002)</span></span>
+      <span class="art-title">Placards Jabs, 1975</span>
+      <span class="art-technique">Serigrafía sobre papel</span>
+      <span class="art-dims">95 × 60 cm</span>
+      <span class="art-edition">Firmada por Chillida y Jabès · 151/500 · Ref. 93800</span>
+      <div class="art-footer"><span class="art-price">5.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- TÀPIES -->
+  <div class="art-card" data-artist="tapies">
+    <div class="art-img"><img src="/t1.1.webp" alt="Tàpies - Cordill"></div>
     <div class="art-info">
       <span class="art-artist">Antoni Tàpies i Puig <span class="art-dates">(1923–2012)</span></span>
       <span class="art-title">Cordill, 1971</span>
@@ -190,9 +251,48 @@
     </div>
   </div>
 
+  <!-- BARCELÓ -->
+  <div class="art-card" data-artist="barcelo">
+    <div class="art-img"><img src="/Barcel%C3%B3%2COmbre%20COSTE.jpg" alt="Barceló - Ombre"></div>
+    <div class="art-info">
+      <span class="art-artist">Miquel Barceló <span class="art-dates">(Felanitx, 1957)</span></span>
+      <span class="art-title">"Ombre", 1990</span>
+      <span class="art-technique">Litografía en colores sobre papel</span>
+      <span class="art-dims">45 × 66 cm</span>
+      <span class="art-edition">Firmada · 6/20 · Galerie Lucie Weill, París · Ref. 92000</span>
+      <div class="art-footer"><span class="art-price">3.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- BOTERO -->
+  <div class="art-card" data-artist="botero">
+    <div class="art-img"><img src="/Botero-1.webp" alt="Botero - Mujer fumando"></div>
+    <div class="art-info">
+      <span class="art-artist">Fernando Botero <span class="art-dates">(1932–2023)</span></span>
+      <span class="art-title">Mujer fumando, 1984</span>
+      <span class="art-technique">Litografía sobre papel</span>
+      <span class="art-dims">45 × 36 cm</span>
+      <span class="art-edition">Firmada · 30/50 · Éd. de la Différence, París · Ref. 96800</span>
+      <div class="art-footer"><span class="art-price">12.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- FOUJITA -->
+  <div class="art-card" data-artist="foujita">
+    <div class="art-img"><img src="/Foujita%20-.webp" alt="Foujita - Fillete au pain"></div>
+    <div class="art-info">
+      <span class="art-artist">Léonard T. Foujita <span class="art-dates">(1886–1968)</span></span>
+      <span class="art-title">"Fillete au pain", 1964</span>
+      <span class="art-technique">Litografía en color sobre papel</span>
+      <span class="art-dims">40 × 20,3 cm</span>
+      <span class="art-edition">Firmada · E.A. 1/15 · Cat. Buisson II nº 64.20 · Ref. 91400</span>
+      <div class="art-footer"><span class="art-price">3.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
   <!-- GENOVÉS -->
-  <div class="art-card">
-    <div class="art-img"><img src="/Genoves.png" alt="Genovés - Sin título"></div>
+  <div class="art-card" data-artist="genoves">
+    <div class="art-img"><img src="/Genoves.webp" alt="Genovés - Sin título"></div>
     <div class="art-info">
       <span class="art-artist">Juan Genovés <span class="art-dates">(1930–2020)</span></span>
       <span class="art-title">Sin título, 1989</span>
@@ -200,6 +300,58 @@
       <span class="art-dims">58 × 78 cm</span>
       <span class="art-edition">Firmada · 37/100 · Ref. 91500</span>
       <div class="art-footer"><span class="art-price">2.400 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- LAM -->
+  <div class="art-card" data-artist="lam">
+    <div class="art-img"><img src="/LAM%2C%20Wilfredo.webp" alt="Lam - Le Regard Vertical"></div>
+    <div class="art-info">
+      <span class="art-artist">Wilfredo Lam <span class="art-dates">(Cuba, 1902–1982)</span></span>
+      <span class="art-title">Le Regard Vertical, 1973</span>
+      <span class="art-technique">Litografía sobre papel</span>
+      <span class="art-dims">65 × 50 cm</span>
+      <span class="art-edition">Firmada · 71/99 · Cat. TR 7304 · Ref. 91700</span>
+      <div class="art-footer"><span class="art-price">3.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- CLAVÉ -->
+  <div class="art-card" data-artist="clave">
+    <div class="art-img"><img src="/Clav%C3%A9%20%20Femme%20peintre.webp" alt="Clavé - Femme-Peintre"></div>
+    <div class="art-info">
+      <span class="art-artist">Antoni Clavé <span class="art-dates">(Barcelona, 1913–2005)</span></span>
+      <span class="art-title">Femme-Peintre, 1953</span>
+      <span class="art-technique">Litografía sobre papel</span>
+      <span class="art-dims">41 × 54 cm</span>
+      <span class="art-edition">Firmada · 68/99 · Cat. Passeron 1977 nº 37 · Ref. 9800</span>
+      <div class="art-footer"><span class="art-price">1.650 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- MARINI -->
+  <div class="art-card" data-artist="marini">
+    <div class="art-img"><img src="/Marino%20Marini%20-.webp" alt="Marini - Apparizione"></div>
+    <div class="art-info">
+      <span class="art-artist">Marino Marini <span class="art-dates">(1901–1980)</span></span>
+      <span class="art-title">Apparizione, 1969</span>
+      <span class="art-technique">Grabado sobre papel BFK Rives</span>
+      <span class="art-dims">43 × 32 cm</span>
+      <span class="art-edition">Firmada · 5/40 · W. Schneider & Co, Berlin · Ref. 91650</span>
+      <div class="art-footer"><span class="art-price">2.850 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <!-- EQUIPO CRÓNICA -->
+  <div class="art-card" data-artist="equipo">
+    <div class="art-img"><img src="/Equipo%20Cronica%20Se%C3%B1orita%20Vanguardia.webp" alt="Equipo Crónica - La señorita Vanguardia"></div>
+    <div class="art-info">
+      <span class="art-artist">Equipo Crónica <span class="art-dates">(1965–1981)</span></span>
+      <span class="art-title">La señorita Vanguardia, 1981</span>
+      <span class="art-technique">Serigrafía sobre papel Guarro</span>
+      <span class="art-dims">75 × 55 cm</span>
+      <span class="art-edition">Firmada · 70/75 · Galeria Maeght, Barcelona · Ref. 92000</span>
+      <div class="art-footer"><span class="art-price">3.500 €</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
     </div>
   </div>
 
@@ -228,6 +380,23 @@
     <a href="/index.html" class="footer-logo"><span>A+K</span></a>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.art-card').forEach(card => {
+      if (filter === 'all' || card.dataset.artist === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
