@@ -35,18 +35,17 @@
 </section>
 
 <div class="filter-bar">
-  <button class="filter-btn active">Todos</button>
-  <button class="filter-btn">Talla</button>
-  <button class="filter-btn">Columnas</button>
-  <button class="filter-btn">Cerámica</button>
-  <button class="filter-btn">Pintura</button>
-  <button class="filter-btn">Mobiliario</button>
+  <button class="filter-btn active" data-filter="todos">Todos</button>
+  <button class="filter-btn" data-filter="talla">Talla</button>
+  <button class="filter-btn" data-filter="columnas">Columnas</button>
+  <button class="filter-btn" data-filter="ceramica">Cerámica</button>
+  <button class="filter-btn" data-filter="pintura">Pintura</button>
+  <button class="filter-btn" data-filter="mobiliario">Mobiliario</button>
 </div>
 
 <div class="art-grid">
 
-  <!-- CARIATIDE -->
-  <div class="art-card">
+  <div class="art-card" data-cat="talla">
     <div class="art-img"><img src="/252_Talla_figura_1-2.webp" alt="Cariatide napolitana siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · Nápoles, siglo XVIII</span>
@@ -57,8 +56,7 @@
     </div>
   </div>
 
-  <!-- HORNACINA -->
-  <div class="art-card">
+  <div class="art-card" data-cat="talla">
     <div class="art-img"><img src="/261_Hornacina_1.webp" alt="Hornacina española siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII</span>
@@ -69,8 +67,7 @@
     </div>
   </div>
 
-  <!-- FRONTÓN -->
-  <div class="art-card">
+  <div class="art-card" data-cat="talla">
     <div class="art-img"><img src="/Frontal_talla_XVIII_1.webp" alt="Frontón español policromado XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVIII</span>
@@ -81,19 +78,29 @@
     </div>
   </div>
 
-  <!-- FRONTÓN QUERUBÍN (ChatGPT_Image_15_29) -->
-  <div class="art-card">
-    <div class="art-img"><img src="/ChatGPT_Image_9_jun_2026__15_29_01.webp" alt="Frontón barroco con querubín siglo XVIII"></div>
+  <!-- ESPECIERO TALAVERA 1 -->
+  <div class="art-card" data-cat="ceramica">
+    <div class="art-img"><img src="/ChatGPT_Image_9_jun_2026__15_29_01.webp" alt="Especieros de cerámica Talavera siglo XVIII"></div>
     <div class="art-info">
-      <span class="art-cat">Talla · España, siglo XVIII</span>
-      <span class="art-title-plain">Frontón barroco con querubín</span>
-      <span class="art-desc">Remate arquitectónico en madera tallada y dorada. Querubín central con alas flanqueado por rocallas, volutas y motivos florales. Procedencia: Colección particular, París.</span>
-      <div class="art-footer"><span class="art-price">Consultar</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+      <span class="art-cat">Cerámica · Talavera, siglo XVIII</span>
+      <span class="art-title-plain">Especieros de cerámica Talavera</span>
+      <span class="art-desc">Cerámica esmaltada y decorada a mano. Producción popular española, Talavera. Decoración en azul cobalto, amarillo y manganeso.</span>
+      <div class="art-footer"><span class="art-price">450 € ud.</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
     </div>
   </div>
 
-  <!-- COLUMNAS SALOMÓNICAS 260 cm -->
-  <div class="art-card">
+  <!-- ESPECIERO TALAVERA 2 -->
+  <div class="art-card" data-cat="ceramica">
+    <div class="art-img"><img src="/ChatGPT_Image_9_jun_2026__15_30_14.webp" alt="Especieros de cerámica Talavera siglo XVIII"></div>
+    <div class="art-info">
+      <span class="art-cat">Cerámica · Talavera, siglo XVIII</span>
+      <span class="art-title-plain">Especieros de cerámica Talavera</span>
+      <span class="art-desc">Cerámica esmaltada y decorada a mano. Producción popular española, Talavera. Decoración en azul cobalto, amarillo y manganeso.</span>
+      <div class="art-footer"><span class="art-price">450 € ud.</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
+    </div>
+  </div>
+
+  <div class="art-card" data-cat="columnas">
     <div class="art-img"><img src="/264_columnas_salomonicas_260_cm_1.webp" alt="Columnas salomónicas siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII</span>
@@ -104,8 +111,7 @@
     </div>
   </div>
 
-  <!-- COLUMNAS 127 cm -->
-  <div class="art-card">
+  <div class="art-card" data-cat="columnas">
     <div class="art-img"><img src="/262_Columnas_126_cm_1.webp" alt="Pareja de columnas siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII</span>
@@ -116,8 +122,7 @@
     </div>
   </div>
 
-  <!-- TRES COLUMNAS 97 cm -->
-  <div class="art-card">
+  <div class="art-card" data-cat="columnas">
     <div class="art-img"><img src="/303_Tres_columnas_1.webp" alt="Tres columnas de talla siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII–XVIII</span>
@@ -128,8 +133,7 @@
     </div>
   </div>
 
-  <!-- COLUMNAS DORADAS 69 cm -->
-  <div class="art-card">
+  <div class="art-card" data-cat="columnas">
     <div class="art-img"><img src="/285_Pareja_columnas_doradas_1.webp" alt="Pareja de columnas doradas siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVIII</span>
@@ -140,8 +144,7 @@
     </div>
   </div>
 
-  <!-- TRES CAPITELES -->
-  <div class="art-card">
+  <div class="art-card" data-cat="columnas">
     <div class="art-img"><img src="/287_Tres_capiteles_1.webp" alt="Tres capiteles corintios siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII</span>
@@ -152,19 +155,7 @@
     </div>
   </div>
 
-  <!-- CAPITELES COMO MESAS (ChatGPT_Image_15_30) -->
-  <div class="art-card">
-    <div class="art-img"><img src="/ChatGPT_Image_9_jun_2026__15_30_14.webp" alt="Capiteles corintios como mesas siglo XVII"></div>
-    <div class="art-info">
-      <span class="art-cat">Talla · España, siglo XVII</span>
-      <span class="art-title-plain">Pareja de capiteles corintios como mesas</span>
-      <span class="art-desc">Capiteles corintios de gran formato en madera tallada y dorada reconvertidos en mesas con tapa de cristal. Hojas de acanto en doble registro. Procedencia: Colección particular, París.</span>
-      <div class="art-footer"><span class="art-price">Consultar</span><a class="art-inquiry" href="/contacto.html">Consultar</a></div>
-    </div>
-  </div>
-
-  <!-- APLIQUES -->
-  <div class="art-card">
+  <div class="art-card" data-cat="talla">
     <div class="art-img"><img src="/290_Apliques_talla.webp" alt="Pareja de apliques de talla siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII</span>
@@ -175,8 +166,7 @@
     </div>
   </div>
 
-  <!-- CANDELERO -->
-  <div class="art-card">
+  <div class="art-card" data-cat="talla">
     <div class="art-img"><img src="/268_Candelero_1.webp" alt="Gran candelero siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVIII</span>
@@ -187,8 +177,7 @@
     </div>
   </div>
 
-  <!-- GUIRNALDAS -->
-  <div class="art-card">
+  <div class="art-card" data-cat="talla">
     <div class="art-img"><img src="/2673_elementos_decorativos_1.webp" alt="Pareja de guirnaldas siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Talla · España, siglo XVII</span>
@@ -199,8 +188,7 @@
     </div>
   </div>
 
-  <!-- AZULEJOS TALAVERA -->
-  <div class="art-card">
+  <div class="art-card" data-cat="ceramica">
     <div class="art-img"><img src="/278_Azulejos_Talavera.webp" alt="Azulejos de Talavera siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Cerámica · Talavera de la Reina, siglo XVIII</span>
@@ -211,8 +199,7 @@
     </div>
   </div>
 
-  <!-- ALBARELOS TERUEL -->
-  <div class="art-card">
+  <div class="art-card" data-cat="ceramica">
     <div class="art-img"><img src="/Albarelos_Teruel_XVII.webp" alt="Tres albarelos de cerámica siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Cerámica · Teruel, principios siglo XVII</span>
@@ -223,8 +210,7 @@
     </div>
   </div>
 
-  <!-- CUENCO CATALÁN -->
-  <div class="art-card">
+  <div class="art-card" data-cat="ceramica">
     <div class="art-img"><img src="/Cuenco_Catalan_XVII.webp" alt="Cuenco catalán serie La corbata siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Cerámica · Cataluña, siglo XVII</span>
@@ -235,8 +221,7 @@
     </div>
   </div>
 
-  <!-- LEBRILLO TALAVERA -->
-  <div class="art-card">
+  <div class="art-card" data-cat="ceramica">
     <div class="art-img"><img src="/Lebrillo_Talavera_XVIII.webp" alt="Lebrillo de Triana siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Cerámica · Triana, Sevilla, siglo XVIII</span>
@@ -247,8 +232,7 @@
     </div>
   </div>
 
-  <!-- LEBRILLO 033 -->
-  <div class="art-card">
+  <div class="art-card" data-cat="ceramica">
     <div class="art-img"><img src="/lebrillo033.webp" alt="Lebrillo español con figura masculina siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Cerámica · España, siglo XVIII</span>
@@ -258,8 +242,7 @@
     </div>
   </div>
 
-  <!-- LEBRILLO 004 -->
-  <div class="art-card">
+  <div class="art-card" data-cat="ceramica">
     <div class="art-img"><img src="/lebrillooo4.webp" alt="Lebrillo español con figura en paisaje siglo XVIII"></div>
     <div class="art-info">
       <span class="art-cat">Cerámica · España, siglo XVIII</span>
@@ -269,8 +252,7 @@
     </div>
   </div>
 
-  <!-- BODEGONES -->
-  <div class="art-card">
+  <div class="art-card" data-cat="pintura">
     <div class="art-img"><img src="/bodegones.webp" alt="Serie de seis bodegones de frutas siglo XVII"></div>
     <div class="art-info">
       <span class="art-cat">Pintura · Círculo de Blas de Ledesma, siglo XVII</span>
@@ -281,8 +263,7 @@
     </div>
   </div>
 
-  <!-- AGUSTÍN ESTEVE -->
-  <div class="art-card">
+  <div class="art-card" data-cat="pintura">
     <div class="art-img"><img src="/224_Agustin_Esteve.webp" alt="Retrato de dama con guirnalda ca. 1800"></div>
     <div class="art-info">
       <span class="art-cat">Pintura · Círculo de Agustín Esteve, ca. 1800</span>
@@ -293,8 +274,7 @@
     </div>
   </div>
 
-  <!-- LLOVERA BOFILL -->
-  <div class="art-card">
+  <div class="art-card" data-cat="pintura">
     <div class="art-img"><img src="/ChatGPT_Image_9_jun_2026__15_27_34.webp" alt="José Llovera Bofill - Dama con abanico"></div>
     <div class="art-info">
       <span class="art-cat">Pintura · José Llovera Bofill (1846–1896)</span>
@@ -305,8 +285,7 @@
     </div>
   </div>
 
-  <!-- ESPEJO CHIPPENDALE -->
-  <div class="art-card">
+  <div class="art-card" data-cat="mobiliario">
     <div class="art-img"><img src="/ChatGPT_Image_8_jun_2026__19_26_58.webp" alt="Espejo de tocador estilo Imperio siglo XVIII-XIX"></div>
     <div class="art-info">
       <span class="art-cat">Mobiliario · Francia/Inglaterra, siglo XVIII–XIX</span>
@@ -316,8 +295,7 @@
     </div>
   </div>
 
-  <!-- MESA TARACEA -->
-  <div class="art-card">
+  <div class="art-card" data-cat="mobiliario">
     <div class="art-img"><img src="/310_Mesa_taracea.webp" alt="Mesa de taracea ca. 1800"></div>
     <div class="art-info">
       <span class="art-cat">Mobiliario · Ca. 1800</span>
@@ -328,8 +306,7 @@
     </div>
   </div>
 
-  <!-- ESCRITORIO CARLOS IV -->
-  <div class="art-card">
+  <div class="art-card" data-cat="mobiliario">
     <div class="art-img"><img src="/325_Escritorio_pe.webp" alt="Escritorio Carlos IV 1790-1810"></div>
     <div class="art-info">
       <span class="art-cat">Mobiliario · 1790–1810</span>
@@ -365,6 +342,21 @@
     <a href="/index.html" class="footer-logo"><span>A+K</span></a>
   </div>
 </footer>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.art-card');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (filter === 'todos' || card.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
