@@ -8,13 +8,27 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
 <nav>
   <button class="nav-hamburger" id="hamburger" aria-label="Menú">
-  <span></span><span></span><span></span>
-</button>
+    <span></span><span></span><span></span>
+  </button>
+  <a class="logo" href="/index.html"><span>A+K</span></a>
+  <ul class="nav-links">
+    <li><a href="/index.html" class="active">Inicio</a></li>
+    <li><a href="/arte.html">Arte</a></li>
+    <li><a href="/decoracion.html">Decoración</a></li>
+    <li><a href="/antiguedades.html">Antigüedades</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <a href="/index.html" class="active">ES</a>
+    <a href="/en/index.html">EN</a>
+  </div>
+</nav>
 
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/index.html">Inicio</a>
+  <a href="/index.html" class="active">Inicio</a>
   <a href="/arte.html">Arte</a>
   <a href="/decoracion.html">Decoración</a>
   <a href="/antiguedades.html">Antigüedades</a>
@@ -22,19 +36,83 @@
 </div>
 
 <script>
-  (function(){
-    var btn = document.getElementById('hamburger');
-    var menu = document.getElementById('mobileMenu');
-    btn.addEventListener('click', function(){
-      menu.classList.toggle('open');
-      btn.classList.toggle('open');
-    });
-    window.addEventListener('scroll', function(){
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-    }, {passive: true});
-  })();
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function(){
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  window.addEventListener('scroll', function(){
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }, {passive: true});
 </script>
+
+<div class="lang-toggle">
+    <a href="/index.html" class="active">ES</a>
+    <a href="/en/index.html">EN</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Mahón, Menorca — Arte · Diseño · Antigüedades</span>
+    <h1 class="hero-tagline">Arte para<br>vivir.<br><span class="accent">Art for<br>living.</span></h1>
+    <p class="hero-subtitle">Tres generaciones dedicadas a la búsqueda de piezas únicas. Arte moderno, antigüedades y diseño singular seleccionados con rigor y sensibilidad.</p>
+    <a class="hero-cta" href="/arte.html">Explorar la colección</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-main"></div>
+    <div class="hero-img-row">
+      <div class="img-cell"></div>
+      <div class="img-cell"></div>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <a class="cat-item" href="/arte.html">
+    <span class="cat-num">01</span><span class="cat-title">Arte</span>
+    <p class="cat-desc">Obra contemporánea y moderna. Pintura, escultura y obra sobre papel seleccionadas con criterio.</p>
+    <span class="cat-arrow">→</span>
+  </a>
+  <a class="cat-item" href="/decoracion.html">
+    <span class="cat-num">02</span><span class="cat-title">Decoración</span>
+    <p class="cat-desc">Mobiliario, iluminación y objetos de carácter. Piezas que definen un espacio.</p>
+    <span class="cat-arrow">→</span>
+  </a>
+  <a class="cat-item" href="/antiguedades.html">
+    <span class="cat-num">03</span><span class="cat-title">Antigüedades</span>
+    <p class="cat-desc">Objetos con historia. Piezas auténticas seleccionadas en Europa por su calidad y autenticidad.</p>
+    <span class="cat-arrow">→</span>
+  </a>
+</section>
+
+<section class="about">
+  <div class="about-text">
+    <span class="about-label">Sobre nosotros</span>
+    <p class="about-body">Alcolea + Krauss nace de una <strong>larga tradición familiar</strong> vinculada al mundo del arte, las antigüedades y el coleccionismo. Somos la tercera generación de una familia dedicada profesionalmente a la búsqueda y selección de piezas únicas.<br><br>Nuestra trayectoria se remonta a la <strong>Sala Nonell de Barcelona</strong>, galería de referencia que trabajó con los nombres más importantes del arte moderno del siglo XX. Hoy continuamos este legado desde Menorca, combinando tradición y contemporaneidad.</p>
+  </div>
+  <div class="about-side">
+    <div class="about-stat"><span class="stat-num">3ª</span><span class="stat-label">Generación</span></div>
+    <div class="about-stat"><span class="stat-num">500m²</span><span class="stat-label">Espacio en Mahón</span></div>
+    <div class="about-stat"><span class="stat-num">ES·EN</span><span class="stat-label">Bilingüe</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><span class="footer-label">Visítanos</span><p class="footer-text">Av. Cap de Cavalleria, 5<br>Polígono Industrial<br>07714 Mahón, Menorca<br><br>Lun–Vie 10:00–14:00 · 17:00–20:00</p></div>
+    <div class="footer-col"><span class="footer-label">Contacto</span><p class="footer-text">+34 871 024 018<br>+34 673 847 899<br><br>alcoleakraussmenorca@gmail.com</p></div>
+    <div class="footer-col"><span class="footer-label">Flea Market</span><p class="footer-text">C/ Son Cremat (detrás de Binipreu)<br>Polígono Industrial de Mahón<br><br>Sábados 10:00–14:00</p></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-bottom-text">© 2026 Alcolea + Krauss — Mahón, Menorca</span>
+    <a href="/index.html" class="footer-logo"><span>A+K</span></a>
+  </div>
+</footer>
+</body>
+</html></script>
 
 <script>
   (function(){
