@@ -8,65 +8,11 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
 <nav>
   <button class="nav-hamburger" id="hamburger" aria-label="Menú">
-  <span></span><span></span><span></span>
-</button>
-
-<div class="nav-mobile-menu" id="mobileMenu">
-  <a href="/index.html">Inicio</a>
-  <a href="/arte.html">Arte</a>
-  <a href="/decoracion.html">Decoración</a>
-  <a href="/antiguedades.html">Antigüedades</a>
-  <a href="/contacto.html">Contacto</a>
-</div>
-
-<script>
-  (function(){
-    var btn = document.getElementById('hamburger');
-    var menu = document.getElementById('mobileMenu');
-    btn.addEventListener('click', function(){
-      menu.classList.toggle('open');
-      btn.classList.toggle('open');
-    });
-    window.addEventListener('scroll', function(){
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-    }, {passive: true});
-  })();
-</script>
-<script>
-  (function(){
-    var logo = document.querySelector('.logo');
-    var menu = document.getElementById('mobileMenu');
-    logo.addEventListener('click', function(e){
-      if(window.innerWidth > 768) return;
-      e.preventDefault();
-      menu.classList.toggle('op
-
-<script>
-  (function(){
-    var logo = document.querySelector('.logo');
-    var menu = document.getElementById('mobileMenu');
-    // Marcar enlace activo
-    var links = menu.querySelectorAll('a');
-    links.forEach(function(a){
-      if(a.href === window.location.href) a.classList.add('active');
-    });
-    // Toggle al clicar logo
-    logo.addEventListener('click', function(e){
-      if(window.innerWidth > 768) return;
-      e.preventDefault();
-      menu.classList.toggle('open');
-      logo.classList.toggle('menu-open');
-    });
-    // Cerrar al hacer scroll
-    window.addEventListener('scroll', function(){
-      menu.classList.remove('open');
-      logo.classList.remove('menu-open');
-    }, {passive: true});
-  })();
-</script>
+    <span></span><span></span><span></span>
+  </button>
   <a class="logo" href="/index.html"><span>A+K</span></a>
   <ul class="nav-links">
     <li><a href="/index.html">Inicio</a></li>
@@ -76,6 +22,33 @@
     <li><a href="/contacto.html">Contacto</a></li>
   </ul>
   <div class="lang-toggle">
+    <a href="/decoracion.html" class="active">ES</a>
+    <a href="/en/decoracion.html">EN</a>
+  </div>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/index.html">Inicio</a>
+  <a href="/arte.html">Arte</a>
+  <a href="/decoracion.html" class="active">Decoración</a>
+  <a href="/antiguedades.html">Antigüedades</a>
+  <a href="/contacto.html">Contacto</a>
+</div>
+
+<script>
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function(){
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  window.addEventListener('scroll', function(){
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }, {passive: true});
+</script>
+
+<div class="lang-toggle">
     <a href="/decoracion.html" class="active">ES</a>
     <a href="/en/decoracion.html">EN</a>
   </div>
