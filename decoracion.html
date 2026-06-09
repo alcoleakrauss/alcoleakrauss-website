@@ -9,7 +9,11 @@
 </head>
 <body>
 <nav>
-  <div class="nav-mobile-menu" id="mobileMenu">
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="nav-mobile-menu" id="mobileMenu">
   <a href="/index.html">Inicio</a>
   <a href="/arte.html">Arte</a>
   <a href="/decoracion.html">Decoración</a>
@@ -17,6 +21,20 @@
   <a href="/contacto.html">Contacto</a>
 </div>
 
+<script>
+  (function(){
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', function(){
+      menu.classList.toggle('open');
+      btn.classList.toggle('open');
+    });
+    window.addEventListener('scroll', function(){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+    }, {passive: true});
+  })();
+</script>
 <script>
   (function(){
     var logo = document.querySelector('.logo');
