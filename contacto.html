@@ -9,6 +9,22 @@
 </head>
 <body>
 <nav>
+  <div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/index.html">Inicio</a>
+  <a href="/arte.html">Arte</a>
+  <a href="/decoracion.html">Decoración</a>
+  <a href="/antiguedades.html">Antigüedades</a>
+  <a href="/contacto.html">Contacto</a>
+</div>
+
+<script>
+  (function(){
+    var logo = document.querySelector('.logo');
+    var menu = document.getElementById('mobileMenu');
+    logo.addEventListener('click', function(e){
+      if(window.innerWidth > 768) return;
+      e.preventDefault();
+      menu.classList.toggle('op
 
 <script>
   (function(){
