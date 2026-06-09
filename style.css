@@ -1,6 +1,6 @@
 /* ── MENÚ MÓVIL ── */
 .nav-mobile-menu {
-  display: none;
+  display: none !important;
   position: absolute;
   top: 64px;
   left: 0;
@@ -9,6 +9,9 @@
   border-bottom: 2px solid var(--black);
   z-index: 99;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .nav-mobile-menu.open { display: flex !important; }
 }
 .nav-mobile-menu a {
   display: block;
@@ -24,17 +27,7 @@
 }
 .nav-mobile-menu a:hover,
 .nav-mobile-menu a.active { background: var(--orange); color: var(--white); }
-.nav-mobile-menu.open { display: flex; }
-.logo.menu-open { background: var(--black); }.art-dates { font-size: 10px; color: var(--mid); font-weight: 500; }
-.art-title { font-size: 13px; font-style: italic; color: var(--burgundy); line-height: 1.4; margin-top: 2px; }
-.art-title-plain { font-size: 12px; font-weight: 900; color: var(--black); line-height: 1.25; }
-.art-technique { font-size: 11px; color: var(--burgundy); line-height: 1.5; }
-.art-dims { font-size: 10px; color: var(--mid); font-weight: 500; }
-.art-edition { font-size: 10px; color: var(--burgundy); font-style: italic; }
-.art-desc { font-size: 11px; color: var(--burgundy); line-height: 1.65; }
-.art-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(17,17,17,0.1); }
-.art-price { font-size: 13px; font-weight: 900; color: var(--orange); }
-.art-inquiry { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--black); border: 1px solid var(--black); padding: 5px 10px; text-decoration: none; transition: background 0.12s, color 0.12s; display: inline-block; }
+.logo.menu-open { background: var(--black); }.art-inquiry { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--black); border: 1px solid var(--black); padding: 5px 10px; text-decoration: none; transition: background 0.12s, color 0.12s; display: inline-block; }
 .art-card:hover .art-inquiry { background: var(--orange); color: var(--white); border-color: var(--orange); }
 .contact-strip { display: grid; grid-template-columns: 2fr 1fr; border-top: 2px solid var(--black); }
 .contact-text { padding: 56px; border-right: 2px solid var(--black); }
