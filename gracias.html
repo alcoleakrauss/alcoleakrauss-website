@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensaje enviado — Alcolea + Krauss · Mahón, Menorca</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="logo" href="/index.html"><span>A+K</span></a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Inicio</a></li>
+    <li><a href="/arte.html">Arte</a></li>
+    <li><a href="/decoracion.html">Decoración</a></li>
+    <li><a href="/antiguedades.html">Antigüedades</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <a href="/gracias.html" class="active">ES</a>
+    <a href="/en/index.html">EN</a>
+  </div>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/index.html">Inicio</a>
+  <a href="/arte.html">Arte</a>
+  <a href="/decoracion.html">Decoración</a>
+  <a href="/antiguedades.html">Antigüedades</a>
+  <a href="/contacto.html">Contacto</a>
+</div>
+
+<section class="page-header">
+  <div class="page-header-left">
+    <span class="page-eyebrow">Mensaje enviado</span>
+    <h1 class="page-title">GRACIAS</h1>
+  </div>
+  <div class="page-header-right">
+    <p class="page-desc">Hemos recibido tu mensaje y te responderemos en la mayor brevedad posible. Atendemos en español, inglés y francés.</p>
+  </div>
+</section>
+
+<div class="contact-strip">
+  <div class="contact-text">
+    <span class="contact-label">¿Qué sigue?</span>
+    <p class="contact-body">Nos pondremos en contacto contigo en breve. Mientras tanto, puedes seguir explorando nuestra colección.</p>
+    <a class="contact-cta" href="/index.html">Volver al inicio</a>
+  </div>
+  <div class="contact-side">
+    <p class="contact-detail">+34 871 024 018<br>+34 673 847 899</p>
+    <p class="contact-detail">alcoleakraussmenorca@gmail.com</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><span class="footer-label">Visítanos</span><p class="footer-text">Av. Cap de Cavalleria, 5<br>Polígono Industrial<br>07714 Mahón, Menorca<br><br>Lun–Vie 10:00–14:00 · 17:00–20:00</p></div>
+    <div class="footer-col"><span class="footer-label">Contacto</span><p class="footer-text">+34 871 024 018<br>+34 673 847 899<br><br>alcoleakraussmenorca@gmail.com</p></div>
+    <div class="footer-col"><span class="footer-label">Flea Market</span><p class="footer-text">C/ Son Cremat (detrás de Binipreu)<br>Polígono Industrial de Mahón<br><br>Sábados 10:00–14:00</p></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-bottom-text">© 2026 Alcolea + Krauss — Mahón, Menorca</span>
+    <a href="/index.html" class="footer-logo"><span>A+K</span></a>
+  </div>
+</footer>
+
+<script>
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function(){
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  window.addEventListener('scroll', function(){
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }, {passive: true});
+</script>
+
+</body>
+</html>
