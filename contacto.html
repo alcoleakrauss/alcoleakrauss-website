@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-
 <nav>
   <button class="nav-hamburger" id="hamburger" aria-label="Menú">
     <span></span><span></span><span></span>
@@ -35,25 +34,6 @@
   <a href="/contacto.html" class="active">Contacto</a>
 </div>
 
-<script>
-  var hamburger = document.getElementById('hamburger');
-  var mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', function(){
-    mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open');
-  });
-  window.addEventListener('scroll', function(){
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-  }, {passive: true});
-</script>
-
-<div class="lang-toggle">
-    <a href="/contacto.html" class="active">ES</a>
-    <a href="/en/contact.html">EN</a>
-  </div>
-</nav>
-
 <section class="page-header">
   <div class="page-header-left">
     <span class="page-eyebrow">Mahón, Menorca — Estamos aquí</span>
@@ -67,7 +47,7 @@
 <div class="contact-main">
   <div class="form-section">
     <span class="form-label-section">Escríbenos</span>
-    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
       <input type="hidden" name="form-name" value="contacto">
       <p style="display:none"><label>No rellenes: <input name="bot-field"></label></p>
       <div class="form-row">
@@ -166,5 +146,19 @@
     <a href="/index.html" class="footer-logo"><span>A+K</span></a>
   </div>
 </footer>
+
+<script>
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function(){
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  window.addEventListener('scroll', function(){
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }, {passive: true});
+</script>
+
 </body>
 </html>
